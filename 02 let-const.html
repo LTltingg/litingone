@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 字面量： []  {}  看见就知道是什么类型
+        // const arr = [1, 2, 3]
+        // arr = [666, 888]
+
+        // 下面的写法可以吗？
+        // 数组
+        // const arr = []
+        // arr = [1, 2, 3]  // Error
+
+        // 对象
+        // const obj = {}
+        // obj = {name:'练练老师'}
+
+        // 如果是引用类型的数据，直接给const声明的变量赋值，地址改变了，Error不能这么操作
+
+        // const声明变量 1. const声明的变量一个要初始化， 赋值
+        const arr = [1, 2, 3]
+        // 2. 如果是引用类型的数据, const变量里存的是地址， 地址， 地址！！
+        // 地址： 相当于是门牌号，房间号，我们通过这个地址找到真实的数据位置。
+
+
+        // 总结： 1. 以后声明变量，优先使用const
+        //       2. 数组和对象， 优先使用const声明
+        //       2. 当我们声明的变量需要改变的时候，用let， 比如for循环
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fn = function(){
+            console.log('全世界最好的班长~~')
+        }
+        const foo = function(){
+            console.log('好好学习天天向上，学完前端学后端')
+        }
+
+        // let timer1 = setInterval(fn, 1000)
+        // console.log(timer1)
+        // console.log(typeof timer1) // number
+
+        // let timer2 = setInterval(foo, 2000)
+        // console.log(timer2)
+        // clearInterval(timer2)
+        
+        // 1. 定时器有返回值， 是一个number， 它是这个定时器的唯一标志
+        // 2. 关闭定时器， clearInterval(timerId)
+
+        /*================  为什么定时器的id用let声明  =====================*/
+
+        // 实际使用的时候， 我们开启一个定时器，关掉之后，还会再次开启
+
+        // 1. 开启定时器，
+        let timer2 = setInterval(foo, 2000)
+        console.log(timer2)
+        // 2. 某些条件，用id关掉这个定时器
+        clearInterval(timer2)
+        // 3. 满足某些条件，再次开启
+        timer2 = setInterval(foo, 2000)
+        console.log(timer2)
+
+    </script>
+</body>
+</html>

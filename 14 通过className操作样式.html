@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            color: red;
+        }
+        .active{
+            width:600px;
+            height: 600px;
+            border-radius: 300px;
+            background-color: skyblue;
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">123123</div>
+    <script>
+        const box = document.querySelector('.box')
+        // box.style.width = '600px'
+        // box.style.height = '600px'
+        // box.style.borderRadius = '300px'
+        // box.style.backgroundColor = 'orange'
+        // box.style.color = 'orange'
+        
+        // 1. 把我们想要修改的样式，自己定义一个类名写在style上
+        // 2. 添加类名，（注意会覆盖原类名）
+        box.className = 'box active'
+
+        // 当我们需要修改的样式非常多的时候，就可以使用className来修改
+        // 注意：1. className修改元素样式，会覆盖掉原来的类名, 如果想保留，都写上
+
+        console.log(box.className)
+        
+        box.style.color = 'pink' // style的权重比className高
+
+        // 实际的应用场景 
+        // 1. style适合单个或者少量的样式修改
+        // 2. className 适合多个样式一起修改
+        // 3. className 还可以用于清空类名
+        // box.className = ''
+    </script>
+</body>
+</html>

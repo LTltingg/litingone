@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box" data-id="6" data-hm-delay="200" data-demo="1111"></div>
+    <a href="http://www.baidu.com">跳转百度</a>
+    <script>
+        // 获取元素
+        const box = document.querySelector('.box')
+        // 自定义属性： 我们自己定义的属性， h5推出的自定义属性必须以data-开头
+        // 为什么以data-开头呢？ 规范， 让我们一看见这个属性，就知道它是自定义属性
+        console.log(box.dataset)  
+        console.log(typeof box.dataset)
+        // box.dataset ==> 对象
+        // 1. 设置  直接在标签上以data-开头设置
+
+        // 2. 获取自定义属性值 对象.dataset 中取值
+        console.log(box.dataset.id) 
+        console.log(box.dataset['id']) 
+
+        // 3. 如果多个短横线链接-， 短横线后面的会变成大写，驼峰式
+        console.log(box.dataset.hmDelay)
+        console.log(box.dataset['hmDelay'])
+        
+
+        // 对象获取属性值
+        // 1. 对象.属性
+        // 2. 对象['属性'] 
+        const a = document.querySelector('a')
+        // console.log(a.href)
+        console.log(a['href'])
+
+
+        // 对象.dataset ==>
+        // 总结一下： 1. dataset是一个对象
+        //           2. 我们的自定义属性，是将data-去掉，放到这个对象里面
+        //           3. 如果多个短横线，要转换成驼峰。
+
+    </script>
+</body>
+</html>

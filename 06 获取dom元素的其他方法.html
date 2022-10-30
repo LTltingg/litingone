@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box"></div>
+    <p>我是内容</p>
+    <p>我是内容</p>
+    <span class="top"></span>
+    <span class="top"></span>
+    <script>
+        // ID  不需要再加#号了
+        // const box = document.querySelector('#box')
+        const box = document.getElementById('box')
+        console.log(box)
+
+        // 通过类名  返回的也是伪数组  不需要再加.符号了
+        // elements 复数  
+        const spans = document.getElementsByClassName('top')
+        console.log(spans)
+
+        // 通过标签名 获取的也是伪数组
+        // elements 复数
+        const p = document.getElementsByTagName('p')
+        console.log(p)
+
+        // 两个特殊的元素
+        // 1. body  ==> document.body
+        // const body = document.querySelector('body')
+        // document.body
+        console.log(document.body)
+
+        // 2. html  ==> document.documentElement
+        console.log(document.documentElement)
+        
+        
+    </script>
+</body>
+</html>

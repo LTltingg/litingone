@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" style="width:300px">我是一句话</div>
+    <script>
+        // 获取元素
+        const box = document.querySelector('.box')
+        console.log(typeof box)
+        // 1. 获取样式 
+        // 获取的是style中的样式，要在div中写上style才能获取到
+        console.log(box.style.width) // 返回的是带单位的字符串
+
+        
+        // 2.设置样式:  对象.style.属性 = 值
+        box.style.width = '600px'
+        box.style.height = '600px'
+        box.style.borderRadius = '300px'
+        box.style.backgroundColor = 'orange'
+        box.style.color = 'orange'
+
+        // 注意：1. width height等需要带单位！
+        //      2. style设置的样式都成为了行内样式 权重1000 
+        //      3. 带-的，驼峰命名
+        console.log(box.style.width)
+
+
+
+    </script>
+</body>
+</html>

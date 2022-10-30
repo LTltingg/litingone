@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div>123123</div>
+    <div class="box">123</div>
+    <div class="box">abc</div>
+    <p id="nav">导航栏</p>
+    <ul class="nav">
+      <li>测试1</li>
+      <li>测试2</li>
+      <li>测试3</li>
+    </ul>
+    <script>
+        // DOM对象 把网页内容当做对象来看待
+        // div在html页面上 我们叫做标签
+        // js里面，我们可以叫做DOM对象 ， 也叫DOM元素
+
+        // 咱们实现交互的前提，就是操作这些元素。 
+
+        // 首先就是要获取元素
+
+        // 1. document.querySelector(选择器)
+        // 作用： 获取匹配的第一个元素
+        // 返回值：匹配的第一个元素/对象
+        
+        const res = document.querySelector('div')
+        console.log(res)
+        console.log(typeof res) // 返回值是一个对象！
+
+        // ==> 打印一个对象的所有属性和方法。console.dir()
+        console.dir(res)
+
+        // 类名
+        const box = document.querySelector('.box')
+        console.log(box)
+        // id
+        const nav = document.querySelector('#nav')
+        console.log(nav)
+        // ul中的第一个li标签
+        const li = document.querySelector('ul li')
+        console.log(li)
+        
+        // 注意： 类名，id一定要记得加上 "." "#" !!!
+
+        /*================  匹配多个  =====================*/
+
+        // document.querySelectorAll() 
+        // 作用： 返回匹配的所有元素对象的集合
+        // 返回值： 伪数组 ， 获取的是一堆元素集合
+
+        // 伪数组：有length，有索引， 没有数组的一些方法push pop
+        const res1 = document.querySelectorAll('.box')
+        console.log(res1)
+        // res1.push(6) // Error
+
+        // const lis = document.querySelectorAll('ul li')
+        // const lis = document.querySelectorAll('.nav li')
+        // console.log(lis)
+
+        const divs = document.querySelectorAll('div')
+        console.log(divs)
+
+        // 注意： 类名id等一定不要忘记传入 . #  ！！！！
+
+        // 练习： 
+
+        const lis = document.querySelectorAll('.nav li')
+
+        for(let i = 0; i < lis.length; i++){
+            console.log(lis[i])
+        }
+        
+
+
+
+        
+
+
+
+        
+
+    </script>
+</body>
+</html>

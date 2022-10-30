@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. 函数声明，用function声明的函数，会提升到当前作用域的最顶层
+        function cb(){
+            console.log(123)
+        }
+        setInterval(cb, 1000)
+
+            
+        // 2. 表达式定义的函数，用const声明的不会提升，用var声明的变量会提升，赋值不会提升
+        var foo = function(){
+            console.log(888)
+        }
+        setInterval(foo, 1000)
+
+        // 3. 建议： 我们函数的定义写在定时器的前面
+
+        let i = 0
+        function fn(){
+            i = 2
+        }
+        fn()
+        console.log(i)
+       
+    </script>
+</body>
+</html>

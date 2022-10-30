@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 语法 setInterval(fn, wait)
+        // 第一个参数 fn 函数
+        // 第二个参数 wait 延迟时间  单位是ms毫秒
+        // 作用： 每隔一段时间，去执行调用这个fn， 会重复执行，一直执行
+
+        setInterval其实是window提给给我们的方法, 可以省略window
+        // window.setInterval(fn, 1000)
+
+        // 写法：
+        // 1. 直接将函数写在setInterval里面
+        setInterval(function(){
+            console.log('大家吃早饭了吗？')
+        }, 1000)
+
+        // 2. 先定义一个函数，再把函数名传入到setInterval中
+        const fn = function(){
+            console.log('早上吃的大肘子')
+        }
+        setInterval(fn, 3000) // 注意函数名后面一定一不要写小括号，写上小括号表示立即调用执行
+
+        // 3. 不要这么写 写了容易被锤. 忘记他
+        // setInterval('fn()', 1000)
+    </script>
+</body>
+</html>

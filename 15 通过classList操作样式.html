@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            .box{
+                width: 200px;
+                height: 200px;
+                background-color: orange;
+                color: red;
+            }
+            .demo{
+                background-color: purple;
+                color: pink;
+                border-radius: 50%;
+            }
+    </style>
+</head>
+<body>
+    <div class="box">111</div>
+    <!-- <div class="box">222</div> -->
+    <script>
+        // 1. 获取元素
+        const box = document.querySelector('.box')
+        
+        // const box2 = document.querySelector('.box:nth-child(2)')
+        // console.log(box2)
+        // 2. 修改样式  style  className ==> 缺陷  覆盖原类名
+
+        // 3. classList里面类名不用加.
+        // 3.1 追加类名  元素.classList.add('类名')
+        // box.classList.add('demo')
+
+        // 3.2 删除类名  元素.classList.remove('类名')
+        // box.classList.remove('box')
+
+        // 3.3 切换类名 元素.classList.toggle('类名')
+        // 切换： 如果有这个类名，切换就是移除这个类名； 如果没有这个类名，就添加上
+        box.classList.toggle('demo')
+
+        // 总结： 1. 单个 style  
+        //       2. 多个 className会覆盖原来类名
+        //       3. 多个 推荐使用classList ， 它不会覆盖原来的类名，只是单纯的追加或者移除或者切换
+
+    </script>
+</body>
+</html>

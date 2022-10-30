@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 面试题 背下来
+        // 1. 数据类型
+        // 基本数据类型（原始类型/值）  7个
+        // （Number String Boolean） （undefined null） Symbol BigInt 
+
+        // 引用类型(复杂类型) Object
+        //   ====>  Array / Function / Math  /  RegExp / Date / Error
+
+
+        // 2. 存储
+        // Stack栈： 基本数据类型存在栈里面
+        // heap堆： 引用类型变量名存在栈里面，栈里面的值存的是地址，指向堆空间中的数据
+
+        // 指向==> 可以理解为等于
+
+        // 3. 检测数据类型
+        // 1. typeof 检测基本数据类型  typeof返回的是字符串
+        typeof null // 'object' ==> 这是一个bug 
+        typeof typeof null  // string
+        typeof 1  // 'number'
+        typeof true // 'boolean'
+
+        // typeof 判断不了是不是数组
+        typeof [1, 2, 3]  // 'object'
+        typeof {}  // 'object'
+        typeof function(){} //'function'
+
+        // 2. A instanceof B 返回true或者false； 检测引用类型的数据
+        console.log([1,2,3] instanceof Array) // true
+        console.log({} instanceof Object) // true
+        console.log(function(){} instanceof Function) // true
+
+        // 3. perfect完美：
+        // Object.prototype.toString.call() 既可以检测基本类型，也可以检测引用类型
+        console.log(Object.prototype.toString.call(1))
+        console.log(Object.prototype.toString.call(true))
+        console.log(Object.prototype.toString.call([1,2,3]))
+        console.log(Object.prototype.toString.call({}))
+        console.log(Object.prototype.toString.call(function(){})) 
+        console.log(Object.prototype.toString.call(null))  // Null
+        console.log(Object.prototype.toString.call(undefined)) // Undefined
+ 
+
+    </script>
+</body>
+</html>

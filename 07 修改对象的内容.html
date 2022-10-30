@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">我是文字的内容</div>
+    <script>
+
+        // 1. 获取元素
+        const box = document.querySelector('.box')
+        console.log(box)
+        // 2. 修改内容
+
+        // innerText
+        // 2.1 获取对象的内容 对象.innerText
+        console.log(box.innerText)
+        // 2.2 设置修改内容  对象.innerText = 值
+        box.innerText = '我是修改后的内容'
+
+        // innerHTML
+        // 2.1 获取对象的内容 对象.innerHTML
+        // console.log(box.innerHTML)
+        // 2.2 设置修改内容  对象.innerHTML = 值
+        // box.innerHTML = '大家饿了嘛'
+
+        // 3. innerText 和 innerHTML区别
+        box.innerText = '<strong>我是内容</strong>'  // 不能解析html标签
+        box.innerHTML = '<strong>我是内容</strong>'  // 可以解析识别html标签
+
+    </script>
+</body>
+</html>

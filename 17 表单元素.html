@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 输入框 -->
+    <!-- <input class="ipt" type="text" value="我是input的内容" placeholder="我是默认值"> -->
+    <input type="checkbox" class="ipt">
+    <!-- 文本域 -->
+    <!-- <textarea name="" id="" cols="30" rows="10"></textarea> -->
+
+    <!-- 禁用按钮 disabled -->
+    <button>点击</button>
+    <script>
+        // 表单元素的属性操作
+        // 获取元素
+        const input = document.querySelector('.ipt')
+        // Q：获取input的内容
+        // 1. 设置input的value值  input.value = 值
+        input.value = '修改了'
+
+        // 2. 获取input的值，   input.value
+
+        console.log(input.innerHTML) // 获取不到
+        console.log(input.value)
+
+        // 3. 修改input的type类型
+        // text password radio checkbox button submit number
+        // placeholder 默认显示的值，不是type类型
+        // input.type = 'password'
+
+        /*================  checked disabled  =====================*/
+        // 表单元素有一些返回值为boolean值的属性 比如checked
+        // 1. checked
+        console.log(input.checked) // true
+
+        // 2. disabled
+        const btn = document.querySelector('button')
+        console.log(btn.disabled)  // true 表示按钮禁用
+        console.log(typeof btn.disabled)
+        
+
+
+
+        
+    </script>
+</body>
+</html>
